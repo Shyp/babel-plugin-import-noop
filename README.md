@@ -61,7 +61,7 @@ NODE_ENV=test mocha ....
 
 To specify a list of file extensions which should be transformed, you can add
 additional options to the plugin declaration:
-```
+```json
 {
   "plugins": [
     ["import-noop", {
