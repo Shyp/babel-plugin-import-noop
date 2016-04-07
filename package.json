@@ -1,0 +1,15 @@
+{
+  "name": "babel-plugin-import-noop",
+  "version": "0.0.1",
+  "description": "Transform certain types of `import` statements into noops that declare empty objects.",
+  "main": "index.js",
+  "author": "Dylan Pyle <dylan@shyp.com>",
+  "license": "MIT",
+  "keywords": [
+    "webpack",
+    "style-loader",
+    "css-loader",
+    "sass-loader",
+    "babel"
+  ]
+}
