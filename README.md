@@ -59,6 +59,18 @@ Or, to only load this plugin during tests (i.e. not in your actual bundle):
 NODE_ENV=test mocha ....
 ```
 
+To specify a list of file extensions which should be transformed, you can add
+additional options to the plugin declaration:
+```
+{
+  "plugins": [
+    ["import-noop", {
+      "extensions": ["scss", "css"]
+    }]
+  ]
+}
+```
+
 ## Limitations
 
 Since the newly defined object won't have any properties, anything you're
