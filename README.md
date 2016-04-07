@@ -34,14 +34,18 @@ const style = {};
 
 ## Usage
 
-In your `.babelrc`:
+```bash
+$ npm install --save-dev babel-plugin-import-noop
+```
+
+Then, in your `.babelrc`:
 ```json
 {
   "plugins": ["import-noop"]
 }
 ```
 
-To only load this plugin during tests (i.e. not in your actual bundle):
+Or, to only load this plugin during tests (i.e. not in your actual bundle):
 ```json
 {
   "env": {
@@ -51,7 +55,6 @@ To only load this plugin during tests (i.e. not in your actual bundle):
   }
 }
 ```
-Then:
 ```bash
 NODE_ENV=test mocha ....
 ```
