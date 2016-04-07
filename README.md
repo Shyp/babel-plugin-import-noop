@@ -23,11 +23,11 @@ but that adds a substantial boot time to every run. Instead, you can use the
 [babel require hook](https://babeljs.io/docs/usage/require/), and use this
 plugin to replace all instances of:
 
-```
+```javascript
 import style from './some-style.scss';
 ```
 with
-```
+```javascript
 const style = {};
 ```
 — during compilation.
@@ -35,14 +35,14 @@ const style = {};
 ## Usage
 
 In your `.babelrc`:
-```
+```json
 {
   "plugins": ["import-noop"]
 }
 ```
 
 To only load this plugin during tests (i.e. not in your actual bundle):
-```
+```json
 {
   "env": {
     "test": {
@@ -52,7 +52,7 @@ To only load this plugin during tests (i.e. not in your actual bundle):
 }
 ```
 Then:
-```
+```bash
 NODE_ENV=test mocha ....
 ```
 
