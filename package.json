@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "Transform certain types of `import` statements into noops that declare empty objects.",
   "main": "index.js",
+  "homepage": "https://github.com/Shyp/babel-plugin-import-noop",
+  "bugs": {
+    "url": "https://github.com/Shyp/babel-plugin-import-noop/issues"
+  },
+  "repository": "git://github.com/Shyp/babel-plugin-import-noop.git",
+  "private": false,
   "author": "Dylan Pyle <dylan@shyp.com>",
   "license": "MIT",
   "keywords": [
