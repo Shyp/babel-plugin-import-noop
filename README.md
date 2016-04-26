@@ -71,6 +71,18 @@ additional options to the plugin declaration:
 }
 ```
 
+## It doesn't work!
+
+If you've installed or updated this plugin and you're still seeing syntax errors
+thrown, there's a chance Babel is caching the old parse tree. The variables used
+to control this are [documented here](https://babeljs.io/docs/usage/require/).
+
+Unless you've overwritten any settings, you can clear this cache via:
+
+```bash
+$ rm ~/.babel.json
+```
+
 ## Limitations
 
 Since the newly defined object won't have any properties, anything you're
