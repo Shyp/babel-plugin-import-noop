@@ -15,17 +15,18 @@ module.exports = function (opts) {
           const node = path.node;
           const fileName = node.source.value;
 
-          if (node.specifiers.length < 1) {
-            // Import is not being given a name, no need to replace it.
-            return;
-          }
-
           // Bail unless the filename we're importing matches one of the
           // extensions we're filtering on.
           const matchedExtensions = (state.opts && state.opts.extensions) || defaultExtensions;
           const matchPattern = new RegExp('(' + matchedExtensions.join('|') + ')$');
 
           if (!matchPattern.test(fileName)) {
+            return;
+          }
+
+          if (node.specifiers.length < 1) {
+            // Import is not being given a name, remove it (it's most likely for webpack's sake).
+            path.remove();
             return;
           }
 
